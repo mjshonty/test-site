@@ -1,0 +1,267 @@
+/*General styling*/
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+/*uncomment code to get a body that takes up 95% of the screen and puts a solid black line around it*/
+body{
+    margin: 0 auto;
+    font-family: 'Verdana', sans-serif;
+    /*width: 95%;*/
+    background-color: #205571;
+    /*border: black solid;*/
+    /*border-top: none;*/
+}
+
+
+/*Uncomment to see the boxes around divs*/
+div{
+    /*border: black solid;*/
+    background-color:#F9F8FF;
+}
+
+main{
+    margin-left: 8%;
+    /*margin-right: 8%;*/
+    padding-left: 10%
+    /*margin-top:2%;*/
+}
+
+/*Allows images to resize*/
+
+img{
+    padding-top: 2%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Div classes*/
+
+.content-wrap{
+    max-width: 90%;
+    /*margin-bottom: 10px;*/
+    /*margin-left: 50px;*/
+    /*margin-right: 50px;*/
+    /*padding: 10px;*/
+    margin: auto;
+    overflow: auto;
+    padding-left: .3%;
+    padding-right: .3%;
+}
+
+.content-wrap-closer{
+    max-width: 90%;
+    /*margin-bottom: 10px;*/
+    margin-left: 50px;
+    margin-right: 50px;
+    /*padding: 10px;*/
+    overflow: auto;
+    padding-left: .3%;
+    padding-right: 3%;
+}
+
+/*Container for iframe videos*/
+
+.flex-container-video{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    /*padding: 3%;*/
+    /*width: 90%;*/
+    /*max-width: 90%;*/
+    /*padding: 10px;*/
+    overflow: hidden;
+}
+
+/*CSS class for iframe videos*/
+/*Lines up NYT video closer to the center of the YT video*/
+.iframe-video{
+    border:0;
+    aspect-ratio: 16/9;
+    /*align-items: center;*/
+    /*margin-bottom:2.5%;*/
+    /*width: 94%;*/
+    margin-top:1.25%;
+    margin-left:1%;
+}
+.iframe-video-youtube{
+    border:0;
+    aspect-ratio: 16/9;
+    margin-bottom:1.25%;
+    /*align-items: center;*/
+    width:89%;
+}
+
+
+/*Fonts imported from google*/
+
+.noto-sans-p{
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    font-size: 1.35%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.center-image {
+    display: block;
+    margin-left: 25%;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+}
+
+.landing-image {
+    clip-path: polygon(50% 0%, 100% 100%, 100% 100%, 0% 100%);
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+/*.profile-image{*/
+/*    clip-path: circle(40%);*/
+/*    shape-outside: circle(45%);*/
+/*}*/
+
+/*Text styling*/
+h1{
+    color: #523261;
+    font-size: 4em;
+    /*margin-top: .5em;*/
+    margin: auto 0;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    padding-bottom: 2%;
+}
+
+h2{
+    color: #205571;
+    margin: auto 0;
+    text-decoration: underline #205571;
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.8em;
+    padding-top: 1%;
+}
+
+h3{
+    color: #C7C0C7;
+    font-size: 25px;
+    margin-top: 2.5em;
+}
+
+p{
+    color: #32021F;
+    font-size: 1.35em;
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    padding:.2%;
+}
+
+footer{
+    background: #1d2a59;
+    text-align: center;
+    display: block;
+    bottom: 0;
+    position: sticky;
+}
+.footer-text{
+    color: White;
+    margin: auto 0;
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    font-size: 1.5rem;
+}
+
+/*Link styling*/
+a{
+    padding: 8px;
+    color: #1B5299;
+    font-size: 1.3em;
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+
+/*Ids*/
+/*Main navbar container*/
+#main-nav-container{
+    background-color: #1d2a59;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+
+/*Navbar content and styling*/
+#main-nav-contents{
+    display: inline-block;
+    background: #1d2a59;
+}
+
+#main-nav-contents ul{
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
+#main-nav-contents li{
+    float: left;
+    border-left:thin solid #bbbbbb;
+    margin:0;
+}
+
+#main-nav-contents li:last-child{
+    border-right:1px solid #bbbbbb;
+}
+
+#main-nav-contents li a{
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    margin: 0;
+
+}
+
+#main-nav-contents li a:hover:not(.active){
+    background-color: #111111;
+    outline: solid white thin;
+    outline-offset: -2px;
+    text-decoration: white solid underline;
+
+}
+
+/*Provides more visible focus highlight for user*/
+#main-nav-contents li a:focus {
+    outline: solid white thin;
+    outline-offset: -1px;
+    text-decoration: white solid underline;
+
+}
+
+#main-nav-contents .active{
+    background-color: #32021F;
+}
