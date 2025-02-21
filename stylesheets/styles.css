@@ -1,139 +1,107 @@
-/*General styling*/
-html{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+/*Fonts from Google*/
+.oswald-h1{
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
 
 
-/*uncomment code to get a body that takes up 95% of the screen and puts a solid black line around it*/
-body{
+.noto-sans-p{
+    font-family: "Noto Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+}
+/* --- Base Styles --- */
+body {
     margin: 0 auto;
     font-family: 'Verdana', sans-serif;
-    /*width: 95%;*/
+    /*line-height: 1.6;*/
     background-color: #205571;
-    /*border: black solid;*/
-    /*border-top: none;*/
+    /*padding: 1.2rem;*/
 }
 
 
-/*Uncomment to see the boxes around divs*/
-div{
-    /*border: black solid;*/
-    background-color:#F9F8FF;
+/* --- Header & Navigation --- */
+header {
+    text-align: center;
 }
 
-main{
-    margin-left: 8%;
-    /*margin-right: 8%;*/
-    padding-left: 10%
-    /*margin-top:2%;*/
+header h1 {
+    font-size: 2em;
+    padding: 1rem;
 }
 
-/*Allows images to resize*/
-
-img{
-    padding-top: 2%;
-    max-width: 100%;
-    height: auto;
+/* --- Main Content Area --- */
+main {
+    background: #F9F8FF;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 1.2rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
 }
 
-/* Div classes*/
+div.spacer{
+    margin-bottom:10em;
+}
 
-.content-wrap{
+.content-wrap {
     max-width: 90%;
-    /*margin-bottom: 10px;*/
-    /*margin-left: 50px;*/
-    /*margin-right: 50px;*/
-    /*padding: 10px;*/
     margin: auto;
     overflow: auto;
     padding-left: .3%;
     padding-right: .3%;
 }
 
-.content-wrap-closer{
-    max-width: 90%;
-    /*margin-bottom: 10px;*/
-    margin-left: 50px;
-    margin-right: 50px;
-    /*padding: 10px;*/
-    overflow: auto;
-    padding-left: .3%;
-    padding-right: 3%;
-}
 
-/*Container for iframe videos*/
-
-.flex-container-video{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    /*padding: 3%;*/
-    /*width: 90%;*/
-    /*max-width: 90%;*/
-    /*padding: 10px;*/
-    overflow: hidden;
-}
-
-/*CSS class for iframe videos*/
-/*Lines up NYT video closer to the center of the YT video*/
-.iframe-video{
-    border:0;
-    aspect-ratio: 16/9;
-    /*align-items: center;*/
-    /*margin-bottom:2.5%;*/
-    /*width: 94%;*/
-    margin-top:1.25%;
-    margin-left:1%;
-}
-.iframe-video-youtube{
-    border:0;
-    aspect-ratio: 16/9;
-    margin-bottom:1.25%;
-    /*align-items: center;*/
-    width:89%;
-}
-
-
-/*Fonts imported from google*/
-
-.noto-sans-p{
-    font-family: "Noto Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-    font-size: 1.35%;
-}
-
-.center {
+img {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-
-.center-image {
-    display: block;
-    margin-left: 25%;
-    margin-right: auto;
-    width: auto;
+    max-width: 100%;
     height: auto;
 }
 
-.landing-image {
-    clip-path: polygon(50% 0%, 100% 100%, 100% 100%, 0% 100%);
-    padding-top: 2%;
-    padding-bottom: 1%;
+img.float-left{
+    float: left;
+    margin-right: .5em;
 }
-/*.profile-image{*/
-/*    clip-path: circle(40%);*/
-/*    shape-outside: circle(45%);*/
-/*}*/
+img.float-right{
+    float:right;
+    margin-left: .5em;
 
-/*Text styling*/
+}
+
+.hero {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: solid black medium;
+    border-radius: 50%;
+}
+
+#landing-image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: solid black thin;
+    border-radius: 25%;
+}
+
+h2, h3, h4 {
+    padding-bottom: 1rem;
+    color: #222;
+}
+
+/*Styling for headers and paragraphs*/
 h1{
     color: #523261;
     font-size: 4em;
@@ -145,7 +113,6 @@ h1{
     font-style: normal;
     padding-bottom: 2%;
 }
-
 h2{
     color: #205571;
     margin: auto 0;
@@ -164,7 +131,7 @@ h3{
     margin-top: 2.5em;
 }
 
-p{
+p {
     color: #32021F;
     font-size: 1.35em;
     font-family: "Noto Sans", serif;
@@ -172,41 +139,90 @@ p{
     font-weight: 500;
     font-style: normal;
     font-variation-settings:"wdth" 100;
-    padding:.2%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin-bottom: .5em;
+
 }
 
-footer{
-    background: #1d2a59;
-    text-align: center;
-    display: block;
-    bottom: 0;
-    position: sticky;
-}
-.footer-text{
-    color: White;
-    margin: auto 0;
-    font-family: "Noto Sans", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-    font-size: 1.5rem;
-}
 
-/*Link styling*/
-a{
-    padding: 8px;
+/* --- Link States --- */
+a {
+    /*padding: 8px;*/
     color: #1B5299;
-    font-size: 1.3em;
     font-family: "Noto Sans", serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    /*font-weight: 500;*/
     font-style: normal;
     font-variation-settings:"wdth" 100;
+
 }
 
-/*Ids*/
-/*Main navbar container*/
+ul li {
+    font-size: 1.35em;
+    list-style: inside lower-greek;
+    margin-bottom: 1rem;
+}
+
+.link-target:hover{
+    background-color: #1B5299;
+    color: white;
+    transition:1.5s;
+}
+
+
+a:hover {
+    text-decoration: none;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+/* Classes used to ensure dynamic YouTube video scaling */
+.flex-container-video{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* --- Footer --- */
+/*footer {*/
+/*    text-align: center;*/
+/*    margin-top: .56rem;*/
+/*    padding: .5rem 0;*/
+/*    !*border-top: 0.1rem solid #ddd;*!*/
+/*    position: sticky;*/
+/*    bottom: 0;*/
+/*    background:#1d2a59;*/
+/*}*/
+/*.footer-text{*/
+/*    color: White;*/
+/*    margin: auto 0;*/
+/*    font-family: "Noto Sans", serif;*/
+/*    font-optical-sizing: auto;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    font-variation-settings:"wdth" 100;*/
+/*    font-size: 1.35em;*/
+/*}*/
+
+/*CSS class for iframe videos*/
+/*Lines up NYT video closer to the center of the YT video*/
+.iframe-video{
+    border:0;
+    aspect-ratio: 16/9;
+    margin-top:1.25%;
+    margin-left:1%;
+}
+.iframe-video-youtube{
+    border:0;
+    aspect-ratio: 16/9;
+    margin-bottom:1.25%;
+    width:89%;
+}
+
 #main-nav-container{
     background-color: #1d2a59;
     position: sticky;
@@ -221,15 +237,17 @@ a{
 }
 
 #main-nav-contents ul{
-    list-style-type: none;
+    /*list-style: none;*/
     margin: 0;
     padding:0;
 }
 
 #main-nav-contents li{
+    list-style: none;
     float: left;
     border-left:thin solid #bbbbbb;
     margin:0;
+    font-size: 1.05em;
 }
 
 #main-nav-contents li:last-child{
@@ -240,7 +258,7 @@ a{
     display: flex;
     color: white;
     text-align: center;
-    padding: 1em 1.5em;
+    padding: 1.1em 1.5em;
     text-decoration: none;
     margin: 0;
 
@@ -249,7 +267,7 @@ a{
 #main-nav-contents li a:hover:not(.active){
     background-color: #111111;
     outline: solid white thin;
-    outline-offset: -2px;
+    outline-offset: -1px;
     text-decoration: white solid underline;
 
 }
@@ -264,4 +282,33 @@ a{
 
 #main-nav-contents .active{
     background-color: #32021F;
+}
+
+
+/*Start aside code*/
+/* --- Sidebar (for Tech Hero Pages) --- */
+aside {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    padding-bottom: 0;
+    /* Float the sidebar for wider screens */
+    float: left;
+    width: 14rem;
+    margin-right: 1rem;
+    margin-left: 1.5rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li a {
+    color: #0058b9;
+    transition: color 0.3s;
+}
+
+aside ul li a:hover {
+    color: #005bb5;
 }
